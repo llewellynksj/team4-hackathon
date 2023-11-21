@@ -1,0 +1,1 @@
+web: gunicorn hack_team_4.wsgi
