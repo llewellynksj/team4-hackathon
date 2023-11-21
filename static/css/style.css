@@ -1,0 +1,74 @@
+/* header */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+:root {
+  /* fonts */
+  --title: "Lato", sans-serif;
+  --main-font: "Playfair Display", serif;
+
+  /* Colours */
+  --text: #0b1d07;
+  --background: #f8fdf7;
+  
+  --primary: #611a74; /* 60% */
+  --secondary: #f4cde9; /* 30% */
+  --accent: #592dc8; /* 10% */
+
+  /* Utility */
+  --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  --boxshadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  --border: 1px solid rgba(0, 0, 0, 0.2);
+  --skew-angle: 5deg;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.color-1-bg {
+  background-color: var(--text);
+}
+
+.color-1-text {
+  color: var(--text);
+}
+
+.color-2-bg {
+  background-color: var(--background);
+}
+
+.color-2-text {
+  color: var(--background);
+}
+
+.color-3-bg {
+  background-color: var(--primary);
+}
+
+.color-3-text {
+  color: var(--primary);
+}
+
+.color-4-bg {
+  background-color: var(--secondary);
+}
+
+.color-4-text {
+  color: var(--secondary);
+}
+
+.color-5-bg {
+  background-color: var(--accent);
+}
+
+.color-5-text {
+  color: var(--accent);
+}
