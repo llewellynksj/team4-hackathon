@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <title>Real-Time Chat</title>
+    <!-- Include CSS and JavaScript libraries -->
+</head>
+<body>
+    <h1>Welcome to the Chat Room</h1>
+    <div id="chat-messages">
+        <!-- Messages will be displayed here -->
+        {{ chat_messages|safe }}
+    </div>
+    <form id="message-form">
+        <input type="text" id="message-input" autocomplete="off">
+        <button type="submit">Send</button>
+    </form>
+    <!-- Include JavaScript code for chat functionality -->
+</body>
+
+{% endblock %}
