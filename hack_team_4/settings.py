@@ -30,7 +30,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io', 'localhost', 'hack-team-4-4360e1a6c5aa.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = [
+    '8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io',
+    'localhost',
+    'hack-team-4-4360e1a6c5aa.herokuapp.com',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -46,10 +51,17 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'chat',
 ]
 
+SITE_ID = 1
+
 MIDDLEWARE = [
+    'allauth.account.middleware.AccountMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -143,3 +155,5 @@ LOGOUT_REDIRECT_URL = 'index'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
