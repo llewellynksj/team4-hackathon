@@ -1,5 +1,5 @@
 /* header */
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700|Quattrocento:400');
 
 :root {
   /* fonts */
@@ -7,19 +7,43 @@
   --main-font: "Playfair Display", serif;
 
   /* Colours */
-  --text: #0b1d07;
-  --background: #f8fdf7;
+  --text: #fef9ec;
+  --background: #140f00;
   
-  --primary: #611a74; /* 60% */
-  --secondary: #f4cde9; /* 30% */
-  --accent: #592dc8; /* 10% */
+  --primary: #d8edee;
+  --secondary: #A55631;
+  --accent: #457373;
 
   /* Utility */
-  --small-boxshadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-  --boxshadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-  --border: 1px solid rgba(0, 0, 0, 0.2);
+  --small-boxshadow: 0 0 0.5rem rgba(255, 255, 255, 0.2);
+  --boxshadow: 0 0 1rem rgba(255, 255, 255, 0.2);
+  --border: 1px solid rgba(255, 255, 255, 0.2);
   --skew-angle: 5deg;
 }
+
+body {
+  font-family: 'Quattrocento';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Oswald';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
 
 * {
   margin: 0;
@@ -73,6 +97,67 @@ body {
   color: var(--accent);
 }
 
+
+/* logo path START */
+.path-1 {
+  width: 50%;
+  stroke-dashoffset: 1200;
+  stroke-dasharray: 1200;
+  fill: none;
+  stroke-width: 1;
+  stroke: rgba(3, 1, 7, 1);
+  animation: draw-1 5s linear forwards;
+}
+
+.path-2 {
+  width: 50%;
+  stroke-dashoffset: 1200;
+  stroke-dasharray: 1200;
+  fill: none;
+  stroke-width: 1;
+  stroke: rgba(251, 123, 53, 1);
+  animation: draw-2 5s linear forwards;
+}
+
+@keyframes draw-1 {
+  0% {
+    fill: none;
+  }
+
+  80% {
+    stroke-dashoffset: 0;
+    fill: rgba(3, 1, 7, 0);
+  }
+
+  100% {
+    fill: rgba(3, 1, 7, 1);
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-2 {
+  0% {
+    fill: none;
+  }
+
+  80% {
+    stroke-dashoffset: 0;
+    fill: rgba(251, 123, 53, 0);
+  }
+
+  100% {
+    fill: rgba(251, 123, 53, 1);
+    stroke-dashoffset: 0;
+  }
+}
+
+svg {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.9));
+}
+
+
+/* logo path END */
+
 /* NavBar */
 nav * {
   font-family: var(--title);
@@ -86,3 +171,4 @@ nav * {
 .form-box {
   max-width: 480px;
 }
+
