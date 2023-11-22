@@ -72,3 +72,17 @@ body {
 .color-5-text {
   color: var(--accent);
 }
+
+/* NavBar */
+nav * {
+  font-family: var(--title);
+}
+
+.form-box * {
+  width: 100%;
+  font-family: var(--main-font);
+}
+
+.form-box {
+  max-width: 480px;
+}
