@@ -28,14 +28,16 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG' in os.environ
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io', 'localhost', 'hack-team-4-4360e1a6c5aa.herokuapp.com',]
+ALLOWED_HOSTS = ['8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io', 'localhost', 'hack-team-4-4360e1a6c5aa.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +46,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'chat',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +78,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'hack_team_4.wsgi.application'
+
+ASGI_APPLICATION = 'hack_team_4.asgi.application'
 
 
 # Database
