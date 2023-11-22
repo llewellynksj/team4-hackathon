@@ -2,4 +2,8 @@ from django.shortcuts import render
 
 
 def chat_room(request):
-    return render(request, 'chat.html')
+    return render(request, "chat/index.html")
+
+
+def room(request, room_name):
+    return render(request, "chat/room.html", {"room_name": room_name})
