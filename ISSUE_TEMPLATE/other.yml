@@ -1,9 +1,0 @@
-name: Other
-description: Other issues
-body:
-- type: textarea
-  attributes:
-    label: "Issue Description:"
-- type: markdown
-  attributes:
-    value: "Thanks for contributing to the Team-4-hackathon Project!"

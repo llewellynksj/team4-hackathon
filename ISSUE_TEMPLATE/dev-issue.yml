@@ -1,9 +1,0 @@
-name: Dev Issue
-description: Issue for development task
-title: 'DEV: '
-labels: DEV Task
-projects: ['Team-4-hackathon']
-body:
-- type: textarea
-  attributes:
-    label: "Description:"
