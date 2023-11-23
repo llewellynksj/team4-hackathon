@@ -24,6 +24,7 @@
 body {
   font-family: 'Quattrocento';
   font-weight: 400;
+  background-color: var(--background);
 }
 
 h1, h2, h3, h4, h5 {
@@ -105,7 +106,7 @@ body {
   stroke-dasharray: 1200;
   fill: none;
   stroke-width: 1;
-  stroke: rgba(3, 1, 7, 1);
+  stroke: var(--primary);
   animation: draw-1 5s linear forwards;
 }
 
@@ -115,7 +116,7 @@ body {
   stroke-dasharray: 1200;
   fill: none;
   stroke-width: 1;
-  stroke: rgba(251, 123, 53, 1);
+  stroke: var(--primary);
   animation: draw-2 5s linear forwards;
 }
 
@@ -126,11 +127,11 @@ body {
 
   80% {
     stroke-dashoffset: 0;
-    fill: rgba(3, 1, 7, 0);
+    fill: #45737300;
   }
 
   100% {
-    fill: rgba(3, 1, 7, 1);
+    fill: var(--accent);
     stroke-dashoffset: 0;
   }
 }
@@ -142,17 +143,17 @@ body {
 
   80% {
     stroke-dashoffset: 0;
-    fill: rgba(251, 123, 53, 0);
+    fill: #a5563100;
   }
 
   100% {
-    fill: rgba(251, 123, 53, 1);
+    fill: var(--secondary);
     stroke-dashoffset: 0;
   }
 }
 
 svg {
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.9));
+  filter: drop-shadow(2px 2px 1px var(--primary));
 }
 
 
@@ -161,6 +162,22 @@ svg {
 /* NavBar */
 nav * {
   font-family: var(--title);
+}
+
+
+#main-logo {
+  width: 3rem;
+  height: 1.5rem;
+}
+
+#navbarText{
+  margin-left: 7rem;
+}
+
+@media screen and (max-width: 768px) {
+  #navbarText{
+  margin-left: 0;
+}
 }
 
 /* Forms */
@@ -177,3 +194,28 @@ nav * {
   width: auto;
 }
 
+/* footer */
+.social-btn{
+  color: var(--secondary);
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.5rem;
+  border: 2px solid var(--secondary);
+}
+
+.social-btn:hover{
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+.copyright-p,
+.copyright-p a 
+{
+  font-size: 0.75rem;
+  color: var(--primary);
+}
+
+.copyright-p a:hover{
+  color: var(--background);
+}
