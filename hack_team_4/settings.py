@@ -101,6 +101,7 @@ CHANNEL_LAYERS = {
         "CONFIG": {
             "hosts": [("127.0.0.1", 6379)],
         },
+        "ROUTING": "hack_team_4.routing.channel_routing",
     },
 }
 
