@@ -18,6 +18,7 @@
         {% if user.email %}
           <p>Email Address: {{ user.email }}</p>
         {% endif %}
+        <a href="{% url 'update_profile' %}">Update</a>
     </div>
   </div>
 
