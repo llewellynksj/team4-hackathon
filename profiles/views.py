@@ -9,7 +9,6 @@ from .models import Profile
 from .forms import RegistrationForm
 
 
-
 def display_profile(request):
   return render(request, 'profile.html', {})
 
@@ -31,4 +30,3 @@ def on_user_logged_out(sender, request, **kwargs):
     """
     messages.add_message(
         request, messages.INFO, 'You have successfully logged out')
-
