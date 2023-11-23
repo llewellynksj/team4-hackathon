@@ -9,9 +9,36 @@ from .models import Profile
 from .forms import RegistrationForm
 
 
+class DisplayProfile(generic.DetailView):
+  model = Profile
+  template_name = 'profile.html'
 
-def display_profile(request):
-  return render(request, 'profile.html', {})
+  def get_context_data(self, *args, **kwargs):
+    context = super(
+        DisplayProfile, self).get_context_data(
+          *args, **kwargs)
+    user_profile = get_object_or_404(Profile, id=self.kwargs['pk'])
+    context['user_profile'] = user_profile
+    return context
+
+
+class UpdateProfile(SuccessMessageMixin, generic.UpdateView):
+    """
+    Displays update profile page
+    """
+    model = Profile
+    template_name = 'update_profile.html'
+    # form_class = UpdateProfileForm
+    success_url = reverse_lazy('profile')
+    success_message = 'Your profile was updated successfully'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    # Direct user to their Profile page when form submitted
+    # def get_success_url(self) -> str:
+    #     return reverse_lazy('profile', kwargs={'pk': self.object.pk})
 
 
 class Registration(SuccessMessageMixin, generic.CreateView):
@@ -31,4 +58,3 @@ def on_user_logged_out(sender, request, **kwargs):
     """
     messages.add_message(
         request, messages.INFO, 'You have successfully logged out')
-

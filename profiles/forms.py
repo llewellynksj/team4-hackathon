@@ -3,26 +3,6 @@ from django.contrib.auth.models import User
 from django import forms
 from .models import Profile
 
-class UpdateProfileForm(forms.ModelForm):
-    """
-    Update custom profile details linked to Profile model
-    """
-    class Meta:
-      model = Profile
-      fields = (
-          'profile_pic',
-          'first_name',
-          'last_name',
-      )
-      widgets = {
-        'profile_pic': forms.FileInput(
-            attrs={'class': 'form-control', 'type': 'file'}),
-        'first_name': forms.TextInput(
-            attrs={'class': 'form-control'}),
-        'last_name': forms.TextInput(
-        attrs={'class': 'form-control'}),
-      }
-
 
 class RegistrationForm(SignupForm):
   """
