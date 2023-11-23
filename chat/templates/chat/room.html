@@ -22,7 +22,7 @@
     const chatSocket = new WebSocket(
         'wss://'
         + window.location.host
-        + '/ws/profile/chat/'
+        + '/ws/chat/'
         + roomName
         + '/'
     );
@@ -50,11 +50,17 @@
     document.querySelector('#chat-message-submit').onclick = function (e) {
         const messageInputDom = document.querySelector('#chat-message-input');
         const message = messageInputDom.value;
+        const session = JSON.stringify({
+            'message': [message, user]
+        });
 
         console.log(user);
-        chatSocket.onopen = () => chatSocket.send(JSON.stringify({
-            'message': [message, user]
-        }));
+        if (chatSocket.readyState !== 1) {
+            setInterval(chatSocket.send(session), 5000);
+        }
+        else {
+            chatSocket.send(session);
+        }
         messageInputDom.value = '';
     };
 </script>
