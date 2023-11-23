@@ -21,7 +21,13 @@
       "**/CVS": true
    },
    "files.autoSave": "off",
-   "workbench.colorTheme": "Visual Studio Dark",
+   // "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.autopep8"
+   },
+   "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+   }
 }
