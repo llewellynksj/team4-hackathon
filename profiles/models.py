@@ -10,7 +10,7 @@ class Profile(models.Model):
   """
   created_on = models.DateTimeField(auto_now_add=True)
   username = models.OneToOneField(User, on_delete=models.CASCADE)
-  profile_pic = CloudinaryField('image', default='profile_placeholder')
+  profile_pic = CloudinaryField('image', default='placeholder')
   first_name = models.CharField(max_length=100, null=True, blank=True)
   last_name = models.CharField(max_length=100, null=True, blank=True)
 

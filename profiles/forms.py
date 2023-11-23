@@ -5,7 +5,7 @@ from .models import Profile
 
 class UpdateProfileForm(forms.ModelForm):
     """
-    Update custom profile details linked to Customer model
+    Update custom profile details linked to Profile model
     """
     class Meta:
       model = Profile
