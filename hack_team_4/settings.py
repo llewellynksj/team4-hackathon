@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io',
@@ -90,7 +90,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'hack_team_4.wsgi.application'
+# WSGI_APPLICATION = 'hack_team_4.wsgi.application'
 
 ASGI_APPLICATION = 'hack_team_4.asgi.application'
 
@@ -98,7 +98,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("hack-team-4-4360e1a6c5aa.herokuapp.com", 6379)],
+            "hosts": [("127.0.0.1", 6379)],
         },
     },
 }
