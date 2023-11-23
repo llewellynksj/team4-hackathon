@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
     'chat',
     'profiles',
 ]
@@ -157,7 +158,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-LOGIN_REDIRECT_URL = '/home/'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login'
 
 # Default primary key field type
