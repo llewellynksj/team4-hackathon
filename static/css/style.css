@@ -163,6 +163,7 @@ nav * {
   font-family: var(--title);
 }
 
+/* Forms */
 .form-box * {
   width: 100%;
   font-family: var(--main-font);
@@ -170,5 +171,9 @@ nav * {
 
 .form-box {
   max-width: 480px;
+}
+
+#id_remember {
+  width: auto;
 }
 
