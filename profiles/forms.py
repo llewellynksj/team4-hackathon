@@ -52,5 +52,4 @@ class RegistrationForm(SignupForm):
     super().__init__(*args, **kwargs)
 
   def custom_signup(self, request, user):
-    user.type = self.cleaned_data["type"]
     user.save()
