@@ -2,17 +2,17 @@
 
 {% block content %}
 <div class="container-fluid">
-  <h3 class="text-center">All Profiles</h3>
+  <h3 class="text-center color-1-text">All Profiles</h3>
   <div class="container-fluid">
       <div class="row">
           {% for profile in profile_list %}
               <div class="col-sm-6 col-lg-4 col-xl-3">
                   <a href="{% url 'profile' profile.pk %}" class="">
                       <div class="">
-                          <img src=" {{ profile.profile_pic.url }}" alt="profile image">
+                          <img src=" {{ profile.profile_pic.url }}" alt="profile image" class="color-1-text">
                       </div>
                       <div class="text-center">
-                          <p class="">{{ profile.username }}</p>
+                          <p class="color-1-text">{{ profile.username }}</p>
                       </div>
                   </a>
               </div>
