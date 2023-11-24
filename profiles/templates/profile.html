@@ -17,11 +17,18 @@
       <div class="d-flex flex-column p-3 text-center">
         <h3 class="color-1-text">My Details</h3>
         <p class="color-1-text">Hi, I'm {{profile.pseudonym}}</p>
+        {% if health_concerns_list %}
+          <p class="color-1-text">My health concerns:</p>
+          <ul>
+            {% for item in health_concerns_list %}
+            <li class="color-1-text">{{ item }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="color-1-text">You have not yet listed any health concerns</p>
+        {% endif %}
 
-      {% if user.email %}
-      <p>Email Address: {{ user.email }}</p>
-      {% endif %}
-      <a href="{% url 'update_profile' user.profile.id %}" class="btn-lift form-button mb-2">Update</a>
+        <a href="{% url 'update_profile' user.profile.id %}" class="btn btn-light form-button my-2">Update</a>
       </div>
     </div>
   </div>
