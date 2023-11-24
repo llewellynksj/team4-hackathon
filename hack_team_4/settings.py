@@ -45,8 +45,6 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'daphne',
-    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -95,19 +93,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'hack_team_4.wsgi.application'
-
-ASGI_APPLICATION = 'hack_team_4.asgi.application'
-
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
-        },
-        "ROUTING": "hack_team_4.routing.channel_routing",
-    },
-}
+WSGI_APPLICATION = 'hack_team_4.wsgi.application'
 
 
 # Database
