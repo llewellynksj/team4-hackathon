@@ -28,13 +28,14 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io',
     'localhost',
     'hack-team-4-4360e1a6c5aa.herokuapp.com',
     '127.0.0.1',
+    'https://hackteam4-790bc1451314.herokuapp.com/'
 ]
 
 
@@ -101,7 +102,7 @@ CHANNEL_LAYERS = {
         "CONFIG": {
             "hosts": [("127.0.0.1", 6379)],
         },
-        "ROUTING": "hack_team_4.routing.channel_routing",
+        
     },
 }
 
