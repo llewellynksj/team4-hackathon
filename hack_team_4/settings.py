@@ -28,9 +28,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG' in os.environ
+DEBUG = False
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
     '8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io',
@@ -45,8 +44,6 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'daphne',
-    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -95,20 +92,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'hack_team_4.wsgi.application'
-
-ASGI_APPLICATION = 'hack_team_4.asgi.application'
-
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
-        },
-        "ROUTING": "hack_team_4.routing.channel_routing",
-    },
-}
-
+WSGI_APPLICATION = 'hack_team_4.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
