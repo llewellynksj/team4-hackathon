@@ -94,7 +94,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'hack_team_4.wsgi.application'
+WSGI_APPLICATION = 'hack_team_4.wsgi.application'
 
 ASGI_APPLICATION = 'hack_team_4.asgi.application'
 
