@@ -94,6 +94,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'hack_team_4.wsgi.application'
 
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
