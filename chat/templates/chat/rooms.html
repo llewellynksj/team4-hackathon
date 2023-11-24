@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-6 mx-auto">
             <div class="">
-                <div id="chat-log"></div>
+                <div id="chat-log bg-light" style="height: 50vh;"></div>
                 <form id="post-form">
                     {% csrf_token %}
                     <input type="hidden" name="username" id="username" value="{{username}}" />
@@ -17,7 +17,6 @@
         </div>
     </div>
 </div>
-
 <script type="text/javascript">
     $(document).on('submit', '#post-form', function (e) {
         e.preventDefault();

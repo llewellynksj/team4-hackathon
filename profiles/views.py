@@ -23,9 +23,8 @@ class UpdateProfile(SuccessMessageMixin, generic.UpdateView):
         return super().form_valid(form)
     
     # Direct user to their Profile page when form submitted
-    # def get_success_url(self) -> str:
-    #     return reverse_lazy('profile', kwargs={'pk': self.object.pk})
-
+    def get_success_url(self) -> str:
+        return reverse_lazy('profile', kwargs={'pk': self.object.pk})
 
 
 class ProfileList(generic.ListView):
