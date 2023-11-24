@@ -38,6 +38,8 @@ ALLOWED_HOSTS = [
     'hackteam4-790bc1451314.herokuapp.com'
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://hackteam4-790bc1451314.herokuapp.com/']
+
 
 # Application definition
 
