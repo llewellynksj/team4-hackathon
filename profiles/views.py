@@ -6,7 +6,26 @@ from django.contrib.auth.signals import user_logged_out
 from django.dispatch import receiver
 from django.contrib import messages
 from .models import Profile
-from .forms import RegistrationForm
+from .forms import RegistrationForm, UpdateProfileForm
+
+
+class UpdateProfile(SuccessMessageMixin, generic.UpdateView):
+    """
+    View for updating the profile model
+    """
+    model = Profile
+    template_name = 'update_profile.html'
+    form_class = UpdateProfileForm
+    success_message = 'Your profile was updated successfully'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
+    # Direct user to their Profile page when form submitted
+    # def get_success_url(self) -> str:
+    #     return reverse_lazy('profile', kwargs={'pk': self.object.pk})
+
 
 
 class ProfileList(generic.ListView):

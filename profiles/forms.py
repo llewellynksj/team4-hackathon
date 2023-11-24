@@ -4,6 +4,22 @@ from django import forms
 from .models import Profile
 
 
+class UpdateProfileForm(forms.ModelForm):
+  """
+  Update profile form
+  """
+  class Meta:
+    model = Profile
+    fields = [
+      'profile_pic',
+      'pseudonym',
+    ]
+    widgets = {
+      'profile_pic': forms.FileInput(attrs={'class': 'form-control', 'type': 'file'}),
+      'pseudonym': forms.TextInput(attrs={'class': 'form-control'}),
+    }
+
+
 class RegistrationForm(SignupForm):
   """
   Custom registration form

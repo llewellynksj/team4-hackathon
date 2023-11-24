@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     '8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io',
     'localhost',
     'hack-team-4-4360e1a6c5aa.herokuapp.com',
+    'hackteam4-790bc1451314.herokuapp.com',
     '127.0.0.1',
 ]
 
