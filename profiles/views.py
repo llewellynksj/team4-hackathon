@@ -9,6 +9,14 @@ from .models import Profile
 from .forms import RegistrationForm
 
 
+class ProfileList(generic.ListView):
+    """
+    Displays all profiles
+    """
+    model = Profile
+    template_name = 'profile_list.html'
+
+
 class DisplayProfile(generic.DetailView):
   model = Profile
   template_name = 'profile.html'
@@ -20,25 +28,6 @@ class DisplayProfile(generic.DetailView):
     user_profile = get_object_or_404(Profile, id=self.kwargs['pk'])
     context['user_profile'] = user_profile
     return context
-
-
-class UpdateProfile(SuccessMessageMixin, generic.UpdateView):
-    """
-    Displays update profile page
-    """
-    model = Profile
-    template_name = 'update_profile.html'
-    # form_class = UpdateProfileForm
-    success_url = reverse_lazy('profile')
-    success_message = 'Your profile was updated successfully'
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
-
-    # Direct user to their Profile page when form submitted
-    # def get_success_url(self) -> str:
-    #     return reverse_lazy('profile', kwargs={'pk': self.object.pk})
 
 
 class Registration(SuccessMessageMixin, generic.CreateView):
