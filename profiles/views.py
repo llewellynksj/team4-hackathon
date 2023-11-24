@@ -5,7 +5,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.signals import user_logged_out
 from django.dispatch import receiver
 from django.contrib import messages
-from .models import Profile
+from .models import Profile, Tag
 from .forms import RegistrationForm, UpdateProfileForm
 
 
@@ -35,17 +35,18 @@ class ProfileList(generic.ListView):
     template_name = 'profile_list.html'
 
 
-class DisplayProfile(generic.DetailView):
-  model = Profile
-  template_name = 'profile.html'
+def display_profile(request, pk):
+  username = Profile.objects.get(id=pk)
+  print(username)
+  health_concerns_list = profile.health_concerns.values_list('issues', flat=True)
+  print(health_concerns_list)
+  # tags = Tag.objects.filter(user)
+  for item in health_concerns_list:
+    print(item)
 
-  def get_context_data(self, *args, **kwargs):
-    context = super(
-        DisplayProfile, self).get_context_data(
-          *args, **kwargs)
-    user_profile = get_object_or_404(Profile, id=self.kwargs['pk'])
-    context['user_profile'] = user_profile
-    return context
+  user_profile = get_object_or_404(Profile, id=pk)
+
+  return render(request, 'profile.html', {"health_concerns_list": health_concerns_list, "user_profile": user_profile})
 
 
 class Registration(SuccessMessageMixin, generic.CreateView):
