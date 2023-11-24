@@ -30,7 +30,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEBUG' in os.environ
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = [
+    '8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io',
+    'localhost',
+    'hack-team-4-4360e1a6c5aa.herokuapp.com',
+    '127.0.0.1',
+    'hackteam4-790bc1451314.herokuapp.com',
+]
 
 CSRF_TRUSTED_ORIGINS = ['https://hackteam4-790bc1451314.herokuapp.com/']
 
