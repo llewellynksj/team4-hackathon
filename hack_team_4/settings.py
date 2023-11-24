@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'hack-team-4-4360e1a6c5aa.herokuapp.com',
     '127.0.0.1',
-    'https://hackteam4-790bc1451314.herokuapp.com'
+    'hackteam4-790bc1451314.herokuapp.com'
 ]
 
 
