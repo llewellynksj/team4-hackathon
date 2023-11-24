@@ -7,17 +7,29 @@
   <h3 class="py-2">My Account</h3>
   <p class="py-2 lead">Welcome to your profile page, {{ user.first_name }}!</p>
   <div class="container-fluid body-content">
+
+      <h3 class="py-2 color-1-text">My Account</h3>
+      <p class="py-2 lead color-1-text">Welcome to your profile page!</p>
+
     <h3 class="py-2 color-1-text">My Account</h3>
     <p class="py-2 lead color-1-text">Welcome to your profile page, {{ user.first_name }}!</p>
+
 
     <!-- Profile Information -->
     <div class="d-flex flex-column flex-sm-row my-3 py-3 justify-content-center">
       <div class="flex-column p-3 text-center">
         <img src="{{ user.profile.profile_pic.url }}" alt="user profile image" class="rounded-circle profile-pic">
+
+    </div>
+    <div class="d-flex flex-column p-3 text-center">
+        <h3 class="color-1-text">My Details</h3>
+        <p class="color-1-text">Hi, I'm {{profile.pseudonym}}</p>
+
       </div>
       <div class="d-flex flex-column p-3 text-center">
         <h3>My Details</h3>
         <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+
         {% if user.email %}
         <p>Email Address: {{ user.email }}</p>
         {% endif %}
