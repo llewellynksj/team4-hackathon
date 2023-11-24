@@ -25,11 +25,13 @@ body {
   font-family: 'Quattrocento';
   font-weight: 400;
   background-color: var(--background);
+  color: var(--text);
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Oswald';
   font-weight: 700;
+  color: var(--secondary);
 }
 
 html {font-size: 100%;} /* 16px */
@@ -164,6 +166,10 @@ nav * {
   font-family: var(--title);
 }
 
+.navbar {
+   border-bottom: solid 2px var(--secondary);
+}
+
 
 #main-logo {
   width: 3rem;
@@ -195,13 +201,28 @@ nav * {
 }
 
 /* footer */
+
+footer section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .social-btn{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--secondary);
   font-size: 1.5rem;
   height: 3rem;
   width: 3rem;
   margin: 0 0.5rem;
-  border: 2px solid var(--secondary);
+  border: 5px solid var(--secondary);
+}
+
+.social-btn i{
+  transition: all 0.3s ease-in-out;
 }
 
 .social-btn:hover{
