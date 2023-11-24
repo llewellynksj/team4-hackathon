@@ -10,10 +10,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign In" %}</h3>
+      <h3 class="color-1-text">{% trans "Sign In" %}</h3>
 
-      <p>{% blocktrans %}Please log in. If you
-        have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+      <p class="color-1-text">{% blocktrans %}Please log in. If you
+        have not created an account yet, then <a class="link color-1-text" href="{{ signup_url }}">sign up</a>
         first.{% endblocktrans %}</p>
     </div>
   </div>
@@ -25,7 +25,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-outline-primary" type="submit">{% trans "Sign In" %}</button>
+        <button class="btn btn-light mb-4 form-button" type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
   </div>

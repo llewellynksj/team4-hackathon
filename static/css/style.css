@@ -98,6 +98,13 @@ body {
   color: var(--accent);
 }
 
+a {
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--accent);
+}
 
 /* logo path START */
 .path-1 {
@@ -181,6 +188,18 @@ nav * {
 }
 
 /* Forms */
+form * {
+  color: var(--text);
+}
+
+form input {
+  color: black;
+}
+
+form * {
+  text-decoration: none;
+}
+
 .form-box * {
   width: 100%;
   font-family: var(--main-font);
@@ -192,6 +211,12 @@ nav * {
 
 #id_remember {
   width: auto;
+}
+
+/* Buttons */
+.form-button:hover {
+  background-color: var(--accent);
+  color: var(--primary);
 }
 
 /* footer */
