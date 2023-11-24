@@ -3,7 +3,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from django.contrib.postgres.fields import ArrayField
+from .choices import HEALTH_TAGS
 
 
 TAG_CATEGORIES = [
@@ -40,10 +40,8 @@ class Profile(models.Model):
     username = models.OneToOneField(User, on_delete=models.CASCADE)
     pseudonym = models.CharField(
         max_length=100, help_text='Enter the name you would like to be known as to ALL users', default='pseudonym')
-    profile_pic = CloudinaryField('image', default='placeholder_k3nekm')
-    first_name = models.CharField(max_length=100, null=True, blank=True)
-    last_name = models.CharField(max_length=100, null=True, blank=True)
-    # health_profile = models.ForeignKey(HealthProfile, on_delete=models.CASCADE)
+    profile_pic = CloudinaryField('image', default='placeholder')
+    health_concerns = models.ManyToManyField(Tag, blank=True, null=True)
     # friends = models.ManyToManyField(User, related_name='friends', blank=True, null=True)
 
     class Meta:
