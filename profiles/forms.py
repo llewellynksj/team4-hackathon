@@ -13,6 +13,7 @@ class UpdateProfileForm(forms.ModelForm):
     fields = [
       'profile_pic',
       'pseudonym',
+      'health_concerns'
     ]
     widgets = {
       'profile_pic': forms.FileInput(attrs={'class': 'form-control', 'type': 'file'}),
