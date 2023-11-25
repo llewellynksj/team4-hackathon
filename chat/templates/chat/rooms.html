@@ -3,13 +3,19 @@
 {% block content %}
 <div class="container">
     <div class="row">
+        <div class="" style="height: 50vh;"><p>{{ room }} {{user.id}} {{user.profile}}!!! {{pk}} , {{profile_id}} </p>
+        </div>
         <div class="col-6 mx-auto">
+            
             <div class="">
-                <div id="chat-log bg-light" style="height: 50vh;"></div>
+                <div id="chat-log" class="bg-light"></div>
+
                 <form id="post-form">
                     {% csrf_token %}
-                    <input type="hidden" name="username" id="username" value="{{username}}" />
-                    <input type="hidden" name="room_id" id="room_id" value="{{room_details.id}}" />
+                    <input type="text" id="pk" value="{{pk}}">
+                    <input type="text" id="profile_id" value="{{profile_id}}">
+                    <input name="username" id="username" value="{{username}}" />
+                    <input name="room_id" id="room_id" value="{{room_details.id}}" />
                     <input type="text" name="message" id="message" width="100px" />
                     <input type="submit" value="Send">
                 </form>
@@ -17,21 +23,31 @@
         </div>
     </div>
 </div>
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
+    const csrf = document.getElementsByName("csrfmiddlewaretoken");
+    const username = document.getElementById("username").value;
+    const room_id = document.getElementById("room_id").value;
+    const message = document.getElementById("message").value;
+    const pk = document.getElementById("pk").value;
+    const profile_id = document.getElementById("profile_id").value;
+    console.log(pk, profile_id)
     $(document).on('submit', '#post-form', function (e) {
         e.preventDefault();
 
+        // NOT WORKING send not found error
         $.ajax({
             type: 'POST',
-            url: '/send',
+            url: `/send/`,
             data: {
-                username: $('#username').val(),
-                room_id: $('#room_id').val(),
-                message: $('#message').val(),
-                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+                username: username,
+                room_id: room_id,
+                message: message,
+                csrfmiddlewaretoken: csrf[0].value,
             },
-            success: function (data) {
-                //alert(data)
+            success: function (response) {
+            window.location.reload();
             }
         });
         document.getElementById('message').value = ''
