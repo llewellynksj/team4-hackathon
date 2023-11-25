@@ -40,7 +40,8 @@ class Profile(models.Model):
     pseudonym = models.CharField(
         max_length=100, help_text='Enter the name you would like to be known as to ALL users', default='pseudonym')
     profile_pic = CloudinaryField('image', default='placeholder')
-    health_concerns = models.ManyToManyField(Tag, blank=True, related_name='issues')
+    health_concerns = models.ManyToManyField(
+        Tag, blank=True, related_name='issues')
     # friends = models.ManyToManyField(User, related_name='friends', blank=True, null=True)
 
     class Meta:
