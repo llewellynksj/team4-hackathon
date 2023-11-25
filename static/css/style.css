@@ -464,14 +464,8 @@ input[type="button"].fcf-btn-block {
   color: black;
 }
 
-.testimonial1{
+.testimonial-pic{
   border-radius: 50%;
-}
-
-.testimonial2{
-  border-radius: 50%;
-}
-
-testimonial3{
-  border-radius:50%;
+  max-width: 5rem;
+  aspect-ratio: 1/1;
 }
