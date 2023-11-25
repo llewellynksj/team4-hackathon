@@ -40,6 +40,7 @@ ALLOWED_HOSTS = [
     'hackteam4-790bc1451314.herokuapp.com',
     '127.0.0.1',
     'hackteam4-790bc1451314.herokuapp.com',
+    '8000-llewellynks-team4hackat-ekkvuvr9b57.ws-eu106.gitpod.io'
 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://hackteam4-790bc1451314.herokuapp.com/']
