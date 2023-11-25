@@ -33,6 +33,7 @@ DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
     '8000-llewellynks-team4hackat-2x5hxilhlkl.ws-eu106.gitpod.io',
+    '8000-llewellynks-team4hackat-3alrtqosyjc.ws-eu106.gitpod.io',
     '8000-llewellynks-team4hackat-sis3d0lmtid.ws-eu106.gitpod.io',
     'localhost',
     'hack-team-4-4360e1a6c5aa.herokuapp.com',
