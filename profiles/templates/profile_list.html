@@ -6,19 +6,22 @@
     <div class="container-fluid">
         <div class="row">
             {% for profile in profile_list %}
-            <div class="col-sm-6 col-lg-4 d-flex justify-content-center">
-                <a href="{% url 'profile' profile.pk %}" class="my-2 d-flex justify-content-center">
-                    <div class="">
-                        <img src=" {{ profile.profile_pic.url }}" alt="profile image" class="color-1-text">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-">
+                <div class="card">
+
+                    <img src="{{ profile.profile_pic.url }}" href="{% url 'profile' profile.pk %}" class="card-img-top"
+                        alt="profile image">
+                    <div class="card-body" href="{% url 'profile' profile.pk %}">
+                        <h5 class="card-title">{{ profile.pseudonym }}</h5>
                     </div>
-                    <div class="mx-2 pt-2">
-                        <p class="color-1-text">{{ profile.pseudonym }}</p>
+                    <div class="tags">
+                        {% for tag in profile.health_concerns.all %}
+                        <div class="btn color-5-bg btn-sm">{{ tag }}</div>
+                        {% endfor %}
                     </div>
-                </a>
+
+                </div>
             </div>
-            {% endfor %}
-            {% for profile in profile_list %}
-            {{ profile.health_concerns}}
             {% endfor %}
         </div>
     </div>
