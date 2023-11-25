@@ -7,12 +7,21 @@
   --main-font: "Playfair Display", serif;
 
   /* Colours */
+
   --text: #000;
   --background: #ded6d6;
   
   --primary: #ded6d6;
   --secondary: pink;
   --accent: #e7a787;
+
+  --text: #252525;
+  --background: white;
+  
+  --primary: #d8edee;
+  --secondary: #219EBC;
+  --accent: #F37434;
+
 
   /* Utility */
   --small-boxshadow: 0 0 0.5rem rgba(255, 255, 255, 0.2);
@@ -106,6 +115,19 @@ a {
 
 .link:hover {
   color: var(--accent);
+}
+
+li {
+  list-style: none;
+}
+
+.home-container {
+  margin: 50px;
+}
+
+.inner {
+  margin: 50px;
+  padding-right: 10px;
 }
 
 /* logo path START */
@@ -219,6 +241,14 @@ form * {
   width: auto;
 }
 
+select * {
+  color: black;
+}
+
+.nav-link:hover {
+  color: var(--accent)
+}
+
 /* Buttons */
 .form-button:hover {
   background-color: var(--accent);
@@ -263,7 +293,12 @@ footer section{
 }
 
 .copyright-p a:hover{
+
   color: var(--bac)
+
+  color: var(--background)
+}
+
 
 /* dils css */
 
@@ -449,3 +484,24 @@ input[type="button"].fcf-btn-block {
 #fcf-button {
     font-family: "Vollkorn", sans-serif;
 }
+
+/* Khalid CSS */
+.fa-solid.fa-brain{
+  color: black;
+}
+
+.fa-solid.fa-spa{
+  color: black;
+}
+
+.fa-solid.fa-user-group{
+  color: black;
+}
+
+.testimonial-pic{
+  border-radius: 50%;
+  max-width: 5rem;
+  aspect-ratio: 1/1;
+}
+
+/* Profile list  */

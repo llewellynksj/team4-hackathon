@@ -2,23 +2,43 @@
 
 {% block content %}
 <div class="container-fluid">
-  <h3 class="text-center color-1-text">All Profiles</h3>
-  <div class="container-fluid">
-      <div class="row">
-          {% for profile in profile_list %}
-              <div class="col-sm-6 col-lg-4 d-flex justify-content-center">
-                  <a href="{% url 'profile' profile.pk %}" class="my-2 d-flex justify-content-center">
-                      <div class="">
-                          <img src=" {{ profile.profile_pic.url }}" alt="profile image" class="color-1-text">
-                      </div>
-                      <div class="mx-2 pt-2">
-                          <p class="color-1-text">{{ profile.pseudonym }}</p>
-                      </div>
-                  </a>
-              </div>
-          {% endfor %}
-      </div>  
-  </div>
+    <h3 class="text-center color-1-text">All Profiles</h3>
+    <div class="container-fluid">
+        <div class="row">
+            {% for profile in profile_list %}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <div class="card">
+
+                    <a href="{% url 'profile' profile.pk %}">
+                        <img src="{{ profile.profile_pic.url }}" class="card-img-top" alt="profile image">
+                        <div class="card-body" href="{% url 'profile' profile.pk %}">
+                            <h5 class="card-title">{{ profile.pseudonym }}</h5>
+                        </div>
+                        <div class="tags">
+                            {% for tag in profile.health_concerns.all %}
+                            <div class="btn color-5-bg btn-sm">{{ tag.friendly_name }}</div>
+                            {% endfor %}
+                        </div>
+                    </a>
+
+
+                    <img src="{{ profile.profile_pic.url }}" href="{% url 'profile' profile.pk %}" class="card-img-top"
+                        alt="profile image">
+                    <div class="card-body" href="{% url 'profile' profile.pk %}">
+                        <h5 class="card-title">{{ profile.pseudonym }}</h5>
+                    </div>
+                    <div class="tags">
+                        {% for tag in profile.health_concerns.all %}
+                        <div class="btn color-5-bg btn-sm m-1" >{{ tag.friendly_name }}</div>
+                        {% endfor %}
+                    </div>
+
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 
