@@ -112,6 +112,15 @@ li {
   list-style: none;
 }
 
+.home-container {
+  margin: 50px;
+}
+
+.inner {
+  margin: 50px;
+  padding-right: 10px;
+}
+
 /* logo path START */
 .path-1 {
   width: 50%;
@@ -225,6 +234,10 @@ form * {
 
 select * {
   color: black;
+}
+
+.nav-link:hover {
+  color: var(--accent)
 }
 
 /* Buttons */
