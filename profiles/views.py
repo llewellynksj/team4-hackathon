@@ -21,7 +21,7 @@ class UpdateProfile(SuccessMessageMixin, generic.UpdateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
-    
+
     # Direct user to their Profile page when form submitted
     def get_success_url(self) -> str:
         return reverse_lazy('profile', kwargs={'pk': self.object.pk})
@@ -36,17 +36,18 @@ class ProfileList(generic.ListView):
 
 
 def display_profile(request, pk):
-  username = Profile.objects.get(id=pk)
-  print(username)
-  health_concerns_list = profile.health_concerns.values_list('issues', flat=True)
-  print(health_concerns_list)
-  # tags = Tag.objects.filter(user)
-  for item in health_concerns_list:
-    print(item)
+    username = Profile.objects.get(id=pk)
+    print(username)
+    health_concerns_list = profile.health_concerns.values_list(
+        'issues', flat=True)
+    print(health_concerns_list)
+    # tags = Tag.objects.filter(user)
+    for item in health_concerns_list:
+        print(item)
 
-  user_profile = get_object_or_404(Profile, id=pk)
+    user_profile = get_object_or_404(Profile, id=pk)
 
-  return render(request, 'profile.html', {"health_concerns_list": health_concerns_list, "user_profile": user_profile})
+    return render(request, 'profile.html', {"health_concerns_list": health_concerns_list, "user_profile": user_profile})
 
 
 class Registration(SuccessMessageMixin, generic.CreateView):

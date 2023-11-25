@@ -2,23 +2,23 @@
 
 {% block content %}
 <div class="container-fluid">
-  <h3 class="text-center color-1-text">All Profiles</h3>
-  <div class="container-fluid">
-      <div class="row">
-          {% for profile in profile_list %}
-              <div class="col-sm-6 col-lg-4 d-flex justify-content-center">
-                  <a href="{% url 'profile' profile.pk %}" class="my-2 d-flex justify-content-center">
-                      <div class="">
-                          <img src=" {{ profile.profile_pic.url }}" alt="profile image" class="color-1-text">
-                      </div>
-                      <div class="mx-2 pt-2">
-                          <p class="color-1-text">{{ profile.pseudonym }}</p>
-                      </div>
-                  </a>
-              </div>
-          {% endfor %}
-      </div>  
-  </div>
+    <h3 class="text-center color-1-text">All Profiles</h3>
+    <div class="container-fluid">
+        <div class="row">
+            {% for profile in profile_list %}
+            <div class="col-sm-6 col-lg-4 d-flex justify-content-center">
+                <a href="{% url 'profile' profile.pk %}" class="my-2 d-flex justify-content-center">
+                    <div class="">
+                        <img src=" {{ profile.profile_pic.url }}" alt="profile image" class="color-1-text">
+                    </div>
+                    <div class="mx-2 pt-2">
+                        <p class="color-1-text">{{ profile.pseudonym }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 
