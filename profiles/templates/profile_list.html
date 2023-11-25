@@ -21,19 +21,6 @@
                         </div>
                     </a>
 
-
-                    <img src="{{ profile.profile_pic.url }}" href="{% url 'profile' profile.pk %}" class="card-img-top"
-                        alt="profile image">
-                    <div class="card-body" href="{% url 'profile' profile.pk %}">
-                        <h5 class="card-title">{{ profile.pseudonym }}</h5>
-                    </div>
-                    <div class="tags">
-                        {% for tag in profile.health_concerns.all %}
-                        <div class="btn color-5-bg btn-sm m-1" >{{ tag.friendly_name }}</div>
-                        {% endfor %}
-                    </div>
-
-
                 </div>
             </div>
             {% endfor %}
