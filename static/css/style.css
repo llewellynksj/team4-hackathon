@@ -263,7 +263,8 @@ footer section{
 }
 
 .copyright-p a:hover{
-  color: var(--bac
+  color: var(--background)
+}
 
 /* dils css */
 
@@ -448,4 +449,29 @@ input[type="button"].fcf-btn-block {
 
 #fcf-button {
     font-family: "Vollkorn", sans-serif;
+}
+
+/* Khalid CSS */
+.fa-solid.fa-brain{
+  color: black;
+}
+
+.fa-solid.fa-spa{
+  color: black;
+}
+
+.fa-solid.fa-user-group{
+  color: black;
+}
+
+.testimonial1{
+  border-radius: 50%;
+}
+
+.testimonial2{
+  border-radius: 50%;
+}
+
+testimonial3{
+  border-radius:50%;
 }
