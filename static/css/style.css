@@ -7,12 +7,12 @@
   --main-font: "Playfair Display", serif;
 
   /* Colours */
-  --text: #fef9ec;
-  --background: #140f00;
+  --text: #252525;
+  --background: white;
   
   --primary: #d8edee;
-  --secondary: #A55631;
-  --accent: #457373;
+  --secondary: #219EBC;
+  --accent: #F37434;
 
   /* Utility */
   --small-boxshadow: 0 0 0.5rem rgba(255, 255, 255, 0.2);
