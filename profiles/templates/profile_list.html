@@ -6,8 +6,9 @@
     <div class="container-fluid">
         <div class="row">
             {% for profile in profile_list %}
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                 <div class="card">
+
                     <a href="{% url 'profile' profile.pk %}">
                         <img src="{{ profile.profile_pic.url }}" class="card-img-top" alt="profile image">
                         <div class="card-body" href="{% url 'profile' profile.pk %}">
@@ -19,6 +20,20 @@
                             {% endfor %}
                         </div>
                     </a>
+
+
+                    <img src="{{ profile.profile_pic.url }}" href="{% url 'profile' profile.pk %}" class="card-img-top"
+                        alt="profile image">
+                    <div class="card-body" href="{% url 'profile' profile.pk %}">
+                        <h5 class="card-title">{{ profile.pseudonym }}</h5>
+                    </div>
+                    <div class="tags">
+                        {% for tag in profile.health_concerns.all %}
+                        <div class="btn color-5-bg btn-sm m-1" >{{ tag.friendly_name }}</div>
+                        {% endfor %}
+                    </div>
+
+
                 </div>
             </div>
             {% endfor %}
