@@ -36,18 +36,25 @@ class ProfileList(generic.ListView):
 
 
 def display_profile(request, pk):
-    username = Profile.objects.get(id=pk)
-    print(username)
-    health_concerns_list = profile.health_concerns.values_list(
-        'issues', flat=True)
-    print(health_concerns_list)
-    # tags = Tag.objects.filter(user)
+
+    health_concerns_list = Profile.health_concerns.through.objects.filter(
+        profile_id=pk)
+    tag_list = []
+    tag_list_name = []
     for item in health_concerns_list:
-        print(item)
+        tag_list.append(item.tag_id)
+        for item in tag_list:
+            tag = Tag.objects.filter(pk=str(item))
+            for t in tag:
+                tag_list_name.append(t.friendly_name)
 
     user_profile = get_object_or_404(Profile, id=pk)
 
-    return render(request, 'profile.html', {"health_concerns_list": health_concerns_list, "user_profile": user_profile})
+    return render(request, 'profile.html', {
+        "health_concerns_list": tag_list_name,
+        "profile": user_profile
+    }
+    )
 
 
 class Registration(SuccessMessageMixin, generic.CreateView):
