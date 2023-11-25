@@ -43,11 +43,12 @@ def display_profile(request, pk):
     tag_list_name = []
     for item in health_concerns_list:
         tag_list.append(item.tag_id)
-        for item in tag_list:
-            tag = Tag.objects.filter(pk=str(item))
-            for t in tag:
-                tag_list_name.append(t.friendly_name)
-
+    for item in tag_list:
+        tag = Tag.objects.filter(pk=str(item))
+        for t in tag:
+            tag_list_name.append(t.friendly_name)
+            
+    print(tag_list_name)
     user_profile = get_object_or_404(Profile, id=pk)
 
     return render(request, 'profile.html', {
