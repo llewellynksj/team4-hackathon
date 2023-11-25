@@ -108,6 +108,10 @@ a {
   color: var(--accent);
 }
 
+li {
+  list-style: none;
+}
+
 /* logo path START */
 .path-1 {
   width: 50%;
@@ -217,6 +221,10 @@ form * {
 
 #id_remember {
   width: auto;
+}
+
+select * {
+  color: black;
 }
 
 /* Buttons */
