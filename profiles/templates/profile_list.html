@@ -16,7 +16,7 @@
                     </div>
                     <div class="tags">
                         {% for tag in profile.health_concerns.all %}
-                        <div class="btn color-5-bg btn-sm">{{ tag }}</div>
+                        <div class="btn color-5-bg btn-sm">{{ tag.friendly_name }}</div>
                         {% endfor %}
                     </div>
 
