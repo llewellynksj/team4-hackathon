@@ -7,7 +7,7 @@
 
 
 
-Live demo: LINK!
+Live demo: https://hack-team-4-4360e1a6c5aa.herokuapp.com/
 
 ## Table of contents
 - [Project Name](#project-name)
@@ -40,10 +40,10 @@ Live demo: LINK!
 
 ## Agile Methodology
 ### Project Goals
--
--
--
--
+- To provide user with easy navigation across website.
+- To give the user options to sign up for frequent visitors.
+- To give people the option to connect and form friendships with 
+- 
 
 
 ### Target Audience

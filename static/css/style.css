@@ -7,12 +7,12 @@
   --main-font: "Playfair Display", serif;
 
   /* Colours */
-  --text: #fef9ec;
-  --background: #140f00;
+  --text: #000;
+  --background: #ded6d6;
   
-  --primary: #d8edee;
-  --secondary: #A55631;
-  --accent: #457373;
+  --primary: #ded6d6;
+  --secondary: pink;
+  --accent: #e7a787;
 
   /* Utility */
   --small-boxshadow: 0 0 0.5rem rgba(255, 255, 255, 0.2);
@@ -263,7 +263,7 @@ footer section{
 }
 
 .copyright-p a:hover{
-  color: var(--bac
+  color: var(--bac)
 
 /* dils css */
 
@@ -297,7 +297,7 @@ footer section{
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #462405;
+    color: #;
     text-align: left;
     background-color: #fff;
     padding: 30px;
