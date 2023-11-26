@@ -8,13 +8,6 @@
 
   /* Colours */
 
-  --text: #000;
-  --background: #ded6d6;
-  
-  --primary: #ded6d6;
-  --secondary: pink;
-  --accent: #e7a787;
-
   --text: #252525;
   --background: white;
   
@@ -136,8 +129,8 @@ li {
   stroke-dashoffset: 1200;
   stroke-dasharray: 1200;
   fill: none;
-  stroke-width: 1;
-  stroke: var(--primary);
+  stroke-width: 2;
+  stroke: var(--secondary);
   animation: draw-1 5s linear forwards;
 }
 
@@ -146,8 +139,8 @@ li {
   stroke-dashoffset: 1200;
   stroke-dasharray: 1200;
   fill: none;
-  stroke-width: 1;
-  stroke: var(--primary);
+  stroke-width: 2;
+  stroke: var(--secondary);
   animation: draw-2 5s linear forwards;
 }
 
@@ -294,9 +287,9 @@ footer section{
 
 .copyright-p a:hover{
 
-  color: var(--bac)
+  color: var(--bac);
 
-  color: var(--background)
+  color: var(--background);
 }
 
 
@@ -332,7 +325,6 @@ footer section{
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #;
     text-align: left;
     background-color: #fff;
     padding: 30px;
