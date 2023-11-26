@@ -20,6 +20,19 @@
                         {% endfor %}
                     </div>
 
+
+                    <a href="{% url 'profile' profile.pk %}">
+                        <img src="{{ profile.profile_pic.url }}" class="card-img-top" alt="profile image">
+                        <div class="card-body" href="{% url 'profile' profile.pk %}">
+                            <h5 class="card-title">{{ profile.pseudonym }}</h5>
+                        </div>
+                        <div class="tags">
+                            {% for tag in profile.health_concerns.all %}
+                            <div class="btn color-5-bg btn-sm">{{ tag.friendly_name }}</div>
+                            {% endfor %}
+                        </div>
+                    </a>
+
                 </div>
             </div>
             

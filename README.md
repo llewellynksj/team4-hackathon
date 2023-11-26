@@ -7,7 +7,7 @@
 
 
 
-Live demo: LINK!
+Live demo: https://hack-team-4-4360e1a6c5aa.herokuapp.com/
 
 ## Table of contents
 - [Project Name](#project-name)
@@ -40,24 +40,24 @@ Live demo: LINK!
 
 ## Agile Methodology
 ### Project Goals
--
--
--
--
+- To provide user with easy navigation across website.
+- To give the user options to sign up for frequent visitors.
+- To give people the option to connect and form friendships with 
+- To give users refined information about the webpage and the purpose of the website.
 
 
 ### Target Audience
-- The site is aimed for
+- The site is aimed for everyone who is concerned about mens' health and wants to be informed or involved. It offers the users to create a safespace for themselves or loved ones to share any struggles they might be facing with privacy.
 
 
 
 ### User Stories
 #### First time user
-- As a first-time user, I want to see the 
-- As a first-time user, I want to see the 
-- As a first-time user, I want to see the 
-- As a first-time user, I want to see the 
-- As a first-time user, I want to see the 
+- As a first-time user, I want to see the the navigation bar to access other pages.
+- As a first-time user, I want to see the what the website is executed for - feedback from users and the anonimity the website provides.
+- As a first-time user, I want to see the creators of this website and their motivation behind it.
+- As a first-time user, I want to see the other users who have a profile on the webpage.
+- As a first-time user, I want to see the how to create a profile efficiently.
 
 
 
@@ -66,12 +66,12 @@ This project was developed with the Agile methodology which allowed us to develo
 
 *GitHub Issues* and *Projects* are used to manage the development process.
 
-The Project link: LINK!
+The Project link: https://hack-team-4-4360e1a6c5aa.herokuapp.com/
 
 The GitHub _Kanban Board_ is used to manage the process and track the progress of the development. When User Story is created, it is automatically added to the Backlog column to be prioritized. The product Backlog is never complete, as it is a dynamic document to respond to changes effectively. As new features are identified, they are added to the product Backlog. As the product is released, the product Backlog is constantly updated to reflect changes in the product and changes in the market. The Kanban board includes the following columns:
 
 - **Product Backlog** - the list of all _User Stories that have not yet been scheduled to be completed. As new User Stories are created, they are automatically added to the Backlog column.
-- **Sprint Backlog** - the collection of prioritized User Stories that have been selected for the current Sprint.
+- **Sprint Backlog** - the collection of prioritised User Stories that have been selected for the current Sprint.
 - **In Progress** - the user stories that are currently being developed.
 - **Done** all completed and tested User Stories.
 
@@ -151,12 +151,28 @@ COPY FROM SPREADSHEET!
 - Github Pages (for deployment)
 
 ## Testing
-COPY FROM SPREADSHEET
-
+| # | Feature | Expected Outcome | Testing Performed | Pass/Fail |
+| :---: | :--- | :---: | :---: | :---: |
+| | Navigation tab | | | |
+| --- | --- | --- | --- | --- |
+| 1 | Home page | redirect to home | press button | ✅ |
+| 2 | Browse | redirect to browsing profiles | press button | ✅ |
+| 3 | Contact Us | redirect to contact us page | press button | ✅ |
+| 4 | Logout | redirect to logout page | press button | ✅ |
+| 5 | Profile | redirect to profile page | press button | ✅ |
+| -- | --- | --- | --- | --- |
+| | Footer | | | |
+| --- | --- | --- | --- | --- |
+| 11 | Facebook | Takes you to facebook | redirect to Facebook | ✅ |
+| 12 | Twitter | Takes you to Twitter | redirect to Twitter | ✅ |
+| 13 | Instagram | Takes you to Instagram | resirect to Instagram | ✅ |
+| 14 | LinkedIn | Takes you to LinkedIn | resirect to LinkedIn | ✅ |											
+			 
 ## Deployment
 This site has been deployed from a GitHub repository using GitHub technology to GitHub Pages. The site can be accessed <a href="https://github.com/llewellynksj/team4-hackathon" target="_blank">here</a>.
 
 ## Credits
+We would like to give credits to Code Institute and Soda team for providing upmost support.
 
 
 ## Acknowledgements
@@ -172,11 +188,6 @@ This site has been deployed from a GitHub repository using GitHub technology to 
 - Vasileios Tsimourdagkas
     - [GitHub](https://github.com/Vasileios20)
     - [LinkedIn](https://www.linkedin.com/in/vasileios-tsimourdagkas/)
-- Ariane Saulnier
-    - [GitHub](https://github.com/aria-vero-s)
-    - [LinkedIn](https://www.linkedin.com/in/ariane-saulnier/)
-- Giaco Ren
-    
 - Dilsat Varli
     - [GitHub]()
     - [LinkedIn](https://www.linkedin.com/in/dilsat-varli-99008b154/)
