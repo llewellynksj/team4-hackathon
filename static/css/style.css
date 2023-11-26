@@ -198,6 +198,10 @@ nav * {
   height: 1.5rem;
 }
 
+#text-logo:hover {
+  color: var(--accent);
+}
+
 #navbarText{
   margin-left: 7rem;
 }
@@ -478,16 +482,21 @@ input[type="button"].fcf-btn-block {
 }
 
 /* Khalid CSS */
+.title {
+  background: -webkit-linear-gradient(#F37434, #219EBC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .fa-solid.fa-brain{
-  color: black;
+  color: var(--accent);
 }
 
 .fa-solid.fa-spa{
-  color: black;
+  color: var(--accent);
 }
 
 .fa-solid.fa-user-group{
-  color: black;
+  color: var(--accent);
 }
 
 .testimonial-pic{
