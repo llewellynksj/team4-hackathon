@@ -2,6 +2,13 @@
 {% load static %}
 
 {% block content %}
+<section>
+    <div class="container-fluid d-flex-column justify-content-center">
+        <h2 class="text-center title">HealthBro</h2>
+        <h4 class="text-center"><em> connecting men through shared experiences</em></h4>
+    </div>
+</section>
+
 <section class="features-icons bg-light text-center">
     <div class="container">
         <div class="row">
@@ -18,7 +25,7 @@
 
 <section class="features-icons bg-light text-center">
     <div class="container">
-        <div class="row d-flex justify-content-between">
+        <div class="row d-flex justify-content-between pt-3">
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                     <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
@@ -53,7 +60,7 @@
                     <h3>Strive Together, Thrive Together</h3>
                     <p class="lead mb-0 pt-3"><em>Buddy up with people who share your commitment to a more fulfilling life</em></p>
                     <p class="lead mr-4"> Breaking down communication barriers around men's health; HealthBro provides an accessible platform allowing us chaps with similar difficulties (psychological, physical and everything in between) to connect and support each through a process somewhat similar to a buddy system.</p>
-                    <p class="lead mr-4 pt-4"><a class="color-5-text" href="{{ signup_url }}">JOIN US NOW</a></p>
+                    <p class="lead mr-4 pt-4"><a class="color-5-text" href="{% url 'account_signup' %}">JOIN US NOW</a></p>
                 </div>
                 <img src="https://health-bro.s3.eu-west-2.amazonaws.com/media/teamwork.jpg" alt="...">
             </div>
